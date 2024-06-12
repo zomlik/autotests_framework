@@ -7,6 +7,6 @@
 ___
 ## Запуск тестов
 ```bash
-git clone
+git clone https://github.com/zomlik/autotests_framework.git
 
 ```
