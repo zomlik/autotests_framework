@@ -1,0 +1,10 @@
+selenium
+pytest
+requests
+faker
+allure-pytest
+webdriver_manager
+pytest-dotenv
+flake8
+black
+isort
