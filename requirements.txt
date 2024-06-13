@@ -1,7 +1,8 @@
 selenium
 pytest
+pytest-xdist
 requests
-faker
+mimesis
 allure-pytest
 webdriver_manager
 pytest-dotenv

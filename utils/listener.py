@@ -1,6 +1,7 @@
 import logging
 import time
 
+import allure
 from selenium.webdriver.support.events import AbstractEventListener
 
 from utils.test_utils import page_load, url_status
@@ -23,3 +24,10 @@ class MonitoringListener(AbstractEventListener):
         end_time = time.time()
         self.load_time = self.start_time - end_time
         logging.info(f"Page loaded in {self.load_time:.2f} seconds")
+
+    def on_exception(self, exception, browser) -> None:
+        allure.attach(
+            name="Скриншот",
+            body=browser.get_screenshot_as_png(),
+            attachment_type=allure.attachment_type.PNG,
+        )

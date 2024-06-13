@@ -82,3 +82,6 @@ venv.bak/
 .pyre/
 .idea/
 .DS_Store
+
+# Allure
+allure-results

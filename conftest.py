@@ -13,7 +13,7 @@ def browser_options():
     options = Options()
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_argument("--ignore-certificate-errors")
-    # options.add_argument("--headless=new")
+    options.add_argument("--headless=new")
     return options
 
 
