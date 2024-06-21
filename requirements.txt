@@ -9,3 +9,4 @@ pytest-dotenv
 flake8
 black
 isort
+pydantic

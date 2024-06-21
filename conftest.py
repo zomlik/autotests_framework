@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.support.events import EventFiringWebDriver
 from webdriver_manager.chrome import ChromeDriverManager
 
+from api.get_companies import GetCompanies
 from utils.listener import MonitoringListener
 
 
@@ -27,3 +28,8 @@ def browser(browser_options):
     e_driver = EventFiringWebDriver(driver, event_listener)
     yield e_driver
     e_driver.quit()
+
+
+@pytest.fixture()
+def companies():
+    return GetCompanies()
