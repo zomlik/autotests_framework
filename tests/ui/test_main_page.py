@@ -11,7 +11,7 @@ def test_first(browser):
     page = MainPage(browser)
     page.open(URLS.MAIN_PAGE)
     with allure.step("Проверка заголовка H2"):
-        assert page.h2_title() == "Hot Sellers1"
+        assert page.h2_title() == "Hot Sellers"
     with allure.step("Проверка url текущей страницы"):
         assert page.current_url() == URLS.MAIN_PAGE
 
