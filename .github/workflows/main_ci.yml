@@ -2,14 +2,15 @@ name: CI-tests
 on:
   workflow_dispatch:
     inputs:
-      description: targets
-      required: true
-      default:
-      type: choice
-      options:
-        - All tests
-        - Api
-        - Ui
+      deployment_target:
+        description: targets
+        required: true
+        default: All tests
+        type: choice
+        options:
+          - All tests
+          - Api
+          - Ui
 jobs:
   tests:
     runs-on: ubuntu-latest
