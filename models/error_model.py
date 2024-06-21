@@ -1,5 +1,6 @@
-from pydantic import BaseModel
 from typing import List
+
+from pydantic import BaseModel
 
 
 class Detail(BaseModel):
@@ -11,7 +12,5 @@ class Detail(BaseModel):
     url: str
 
 
-class ErrorMessageModel(BaseModel):
+class ValidationErrorModel(BaseModel):
     detail: List[Detail]
-
-

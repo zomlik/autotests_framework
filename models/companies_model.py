@@ -1,12 +1,13 @@
-from pydantic import BaseModel
 from enum import Enum
 from typing import List
+
+from pydantic import BaseModel
 
 
 class StatusEnum(str, Enum):
     active = "ACTIVE"
     closed = "CLOSED"
-    bankrut = "BANKRUPT"
+    bankrupt = "BANKRUPT"
 
 
 class Data(BaseModel):

@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.support.events import EventFiringWebDriver
 from webdriver_manager.chrome import ChromeDriverManager
 
+from api.create_users import CreateUsers
 from api.get_companies import GetCompanies
 from utils.listener import MonitoringListener
 
@@ -33,3 +34,8 @@ def browser(browser_options):
 @pytest.fixture()
 def companies():
     return GetCompanies()
+
+
+@pytest.fixture()
+def create_users():
+    return CreateUsers()

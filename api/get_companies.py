@@ -1,8 +1,9 @@
 import allure
+from pydantic import ValidationError
+
 from api.api import ApiClient
 from config.routes import Routes
 from models.companies_model import CompaniesModel
-from pydantic import ValidationError
 
 
 class GetCompanies(ApiClient):
