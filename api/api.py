@@ -2,7 +2,7 @@ import allure
 import requests
 from pydantic import ValidationError
 
-from models.error_model import ValidationErrorModel
+from models.validation_error_model import ValidationErrorModel
 from utils.logger import log
 
 

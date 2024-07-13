@@ -14,6 +14,7 @@ class BasePage:
     def open(self, url: str) -> None:
         return self.browser.get(url)
 
+    @property
     def current_url(self) -> None:
         return self.browser.current_url
 

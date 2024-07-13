@@ -13,7 +13,7 @@ def test_first(browser):
     with allure.step("Проверка заголовка H2"):
         assert page.h2_title() == "Hot Sellers"
     with allure.step("Проверка url текущей страницы"):
-        assert page.current_url() == URLS.MAIN_PAGE
+        assert page.current_url == URLS.MAIN_PAGE
 
 
 @allure.title("Второй тест")
@@ -23,4 +23,4 @@ def test_clik_on_button(browser):
     page.open(URLS.MAIN_PAGE)
     page.click_on_shop_new_yoga()
     with allure.step("Проверка перехода на страницу 'Shop New Yoga'"):
-        assert page.current_url() == URLS.YOGA_PAGE
+        assert page.current_url == URLS.YOGA_PAGE
